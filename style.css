@@ -1,0 +1,214 @@
+/* Брейкпоинты: 1200 и больше - ноутбуки и большие мониторы, 992px по 1199px - планшеты и маленькие ноутбуки, 768px по 991px - планшеты маленькие, 320px по 767px мобилы */
+
+/* HOME start */
+.home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    /*background-image: url('../images/home_1.png');*/
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.home__inner {
+    flex: 0 1 580px;
+    text-align: center;
+    color: #fff;
+}
+.home__inner p {
+    width: 540px;
+    margin: 40px auto;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 36px;
+}
+/* HOME end */
+/* ------------------------------------------------------ */
+/* EASY start */
+.easy {
+    padding: 95px 0;
+}
+.easy__inner {
+    display: flex;
+    justify-content: space-between;
+}
+@media (max-width: 1110px) {
+    .easy__inner {
+        width: 450px;
+        margin: 0 auto;
+        flex-direction: column-reverse;
+    }
+}
+.easy__inner .left {
+    flex: 0 1 445px;
+    padding-top: 45px;
+}
+@media (max-width: 1110px) {
+    .easy__inner .left {
+        flex-basis: auto;
+    }
+}
+.easy__inner .left p {
+    margin: 40px 0 20px;
+}
+.easy__inner .right {
+    position: relative;
+    padding-right: 95px;
+}
+.easy__inner .right .play {
+    position: absolute;
+    top: calc(50% - 33px);
+    left: -33px;
+    display: block;
+    width: 66px;
+    height: 66px;
+    border-radius: 50%;
+    background-color: #9c0059;
+}
+@media (max-width: 1110px) {
+    .easy__inner .right .play {
+        top: 20px;
+        right: 20px;
+        left: auto;
+    }
+}
+/*  */
+/*  */
+.features {
+    padding: 63px 0 124px;
+    background-color: #FAFAFA;
+}
+.features .h2 {
+    margin-bottom: 65px;
+    text-align: center;
+}
+.features__blocks {
+    display: flex;
+    justify-content: space-between;
+}
+.features__item {
+    flex: 0 1 350px;
+}
+.features__item .image {
+    width: 100%;
+    height: 250px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 8px;
+}
+.features__item .text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 293px;
+    height: 198px;
+    margin: -93px auto 0;
+    background-color: #fff;
+    padding: 33px 32px 25px;
+    box-shadow: 0 5px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-align: center;
+}
+
+/**/
+/**/
+.contact {
+    padding: 120px 0 95px;
+}
+.contact__inner {
+    display: flex;
+    justify-content: space-between;
+}
+.contact__inner .left {
+    flex: 0 1 445px;
+}
+.contact__inner .left .h2 {
+    margin-bottom: 60px;
+}
+.contact__inner .right {
+    flex: 0 1 540px;
+}
+.contact__inner form {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.contact__inner form > div {
+    width: 100%;
+}
+.contact__inner form > div:not(:last-child) {
+    margin-bottom: 24px;
+}
+.contact__inner form > div.w-50 {
+    /*width: calc(50% - 15px);*/
+    flex: 0 1 calc(50% - 15px);
+}
+.contact__inner form input,
+.contact__inner form select {
+    display: block;
+    width: 100%;
+    height: 60px;
+    border: 1px solid #333333;
+    border-radius: 6px;
+    padding: 0 30px;
+}
+
+
+.parent{
+    width: 100%;
+    margin: 0 auto;
+}
+.parent .child{
+    background-color: lightslategrey;
+    color: #333333;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.parent .child::before{
+   content: 'Privetiki konfetiki!';
+}
+.parent .child::after{
+    content:'bye'
+}
+@media (min-width:992px) and (max-width:1199px){
+    .features__blocks{
+        flex-direction: column;
+        align-items: center;
+    }
+    .features__item{
+        width: 33%;
+        margin: 20px 0 ;
+    }
+}
+@media (min-width:768px) and (max-width:991px){
+    .features__blocks{
+        flex-direction: column;
+        align-items: center;
+    }
+    .features__item{
+        width: 45%;
+        margin: 20px 0 ;
+    }
+}
+@media (min-width:320px) and (max-width:767px){
+    .features__blocks{
+        flex-direction: column;
+        align-items: center;
+    }
+    .features__item{
+        width: 75%;
+        margin: 20px 0 ;
+    }
+    .contact__inner{
+        flex-direction: column-reverse;
+    }
+    .contact__inner .left{
+        flex: 0 1 350px;
+    }
+    .contact__inner .right{
+        flex: 0 1 350px;
+    }
+}
